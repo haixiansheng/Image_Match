@@ -21,7 +21,6 @@ for m,n in matches:
     if m.distance < 0.7*n.distance:
         good.append(m)
 
-
 if len(good)>MIN_MATCH_COUNT:
 # 获取关 点的坐标
     src_pts = np.float32([ kp1[m.queryIdx].pt for m in good ]).reshape(-1,1,2)
